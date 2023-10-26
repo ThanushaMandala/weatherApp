@@ -2,6 +2,7 @@ const form = document.querySelector('form');
 const input = document.querySelector('input');
 const iconDiv = document.querySelector('#icon');
 const detailsDiv = document.querySelector('#details');
+const pressureDiv = document.querySelector('#pressure');
 
 // Add event listener to search form
 form.addEventListener('submit', (e) => {
@@ -17,16 +18,17 @@ form.addEventListener('submit', (e) => {
       const temp = data.data[0].temp;
       const description = data.data[0].weather.description;
       let iconCode = data.data[0].weather.icon;
+      const pressure = data.data[0].pres;
       // remove the first character from the icon code
       // to get the correct icon name
       iconCode = iconCode.substring(1);
 
       // Display weather data and icon
       iconDiv.innerHTML = `<i class="fas fa-${getIcon(iconCode)}"></i>`;
-      detailsDiv.innerHTML = `Temperature: ${temp}°C<br>Description: ${description}`;
+      detailsDiv.innerHTML = `Temperature: ${temp}°C<br>Description: ${description}<br>Pressure: ${pressure}mbar`;
     })
     .catch(error => {
-      console.error(error);
+      console.error('Error fetching data:', error);
       detailsDiv.innerHTML = 'An error occurred while fetching weather data.';
     });
 });
