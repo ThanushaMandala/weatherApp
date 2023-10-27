@@ -1,22 +1,50 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Weather App</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/6a8374cd04.js" crossorigin="anonymous"></script>
-  </head>
-  <body>
-    <h1>Weather App</h1>
-    <form>
-      <label for="city">Enter city name:</label>
-      <input type="text" id="city" name="city">
-      <button type="submit">Get Weather</button>
-      <button type="reset">Clear</button>
-    </form>
-    <div id="weather">
-      <div id="icon"></div>
-      <div id="details"></div>
-    </div>
-    <script src="app.js"></script>
-  </body>
+
+<head>
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/6a8374cd04.js" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      padding: 25px;
+      background-color: white;
+      color: black;
+      font-size: 25px;
+    }
+
+    .dark-mode {
+      background-color: black;
+      color: white;
+    }
+  </style>
+
+</head>
+
+<body>
+  <h5>Toggle Dark/Light Mode</h5>
+  <p>click below button to toggle dark mode.</p>
+  <button onclick="myFunction()">Toggle dark mode</button>
+  <script>
+    function myFunction() {
+      var element = document.body;
+      element.classList.toggle("dark-mode");
+    }
+  </script>
+  <h1>Weather App</h1>
+  <form>
+    <label for="city">Enter city name:</label>
+    <input type="text" id="city" name="city">
+    <button type="submit">Get Weather</button>
+    <button type="reset">Clear</button>
+  </form>
+  <div id="weather">
+    <div id="icon"></div>
+    <div id="details"></div>
+  </div>
+  <script src="app.js"></script>
+
+</body>
+
 </html>
