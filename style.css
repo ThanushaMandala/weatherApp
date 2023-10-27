@@ -54,3 +54,15 @@ button[type="submit"]:hover {
 #details {
   font-size: 1.5rem;
 }
+
+h2 {
+  margin-top: 50px;
+  margin-left: 50px;
+  font-family: Georgia, serif, sans-serif;
+  color: green; 
+  font-size: 20px; 
+  text-transform: uppercase; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
+  letter-spacing: 2px; 
+  font-weight: 700; 
+}
