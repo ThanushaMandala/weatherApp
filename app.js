@@ -2,6 +2,7 @@ const form = document.querySelector("form");
 const input = document.querySelector("input");
 const iconDiv = document.querySelector("#icon");
 const detailsDiv = document.querySelector("#details");
+const loadingSpinner = document.querySelector("#loadingSpinner");   // reference to the loading spinner
 
 // Add event listener to search form
 form.addEventListener("submit", (e) => {
@@ -9,6 +10,9 @@ form.addEventListener("submit", (e) => {
     const city = input.value;
     const apiKey = "f235c5e839c641aa861661c219ae7237";
     const url = `https://api.weatherbit.io/v2.0/current?city=${city}&key=${apiKey}`;
+
+    // show the loading spinner while fetching data
+    loadingSpinner.style.display = 'block';
 
     // Fetch weather data for selected location
     fetch(url)
@@ -24,6 +28,9 @@ form.addEventListener("submit", (e) => {
             // to get the correct icon name
             iconCode = iconCode.substring(1);
 
+            // hide the loading spinner after data is fetched
+            loadingSpinner.style.display = 'none';
+
             // Display weather data and icon
             iconDiv.innerHTML = `<i class="fas fa-${getIcon(iconCode)}"></i>`;
             detailsDiv.innerHTML = `Temperature: ${temp}°C<br>Description: ${description}<br>Humidity: ${humidity}<br>Pressure: ${pressure}mbar`;
@@ -32,6 +39,9 @@ form.addEventListener("submit", (e) => {
             console.error(error);
             detailsDiv.innerHTML =
                 "An error occurred while fetching weather data.";
+
+            // hide the loading spinner after data is fetched
+            loadingSpinner.style.display = 'none';
         });
 });
 
