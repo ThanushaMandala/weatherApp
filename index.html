@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <title>Weather App</title>
   <link rel="stylesheet" href="style.css">
@@ -46,5 +45,25 @@
   <script src="app.js"></script>
 
 </body>
-
+  <head>
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/6a8374cd04.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <h1>Weather App</h1>
+    <form>
+      <label for="city">Enter city name:</label>
+      <input type="text" id="city" name="city">
+      <button type="submit">Get Weather</button>
+      <button type="reset">Clear</button>
+    </form>
+    <div id="loadingSpinner" class="loading-spinner"></div>
+    <div id="weather">
+      <h3>Current Weather Conditions</h3>
+      <div id="icon"></div>
+      <div id="details"></div>
+    </div>
+    <script src="app.js"></script>
+  </body>
 </html>
