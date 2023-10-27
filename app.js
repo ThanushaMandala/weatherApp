@@ -17,6 +17,7 @@ form.addEventListener("submit", (e) => {
             const temp = data.data[0].temp;
             const description = data.data[0].weather.description;
             const humidity = data.data[0].rh;
+            const pressure = data.data[0].pres;
 
             let iconCode = data.data[0].weather.icon;
             // remove the first character from the icon code
@@ -25,7 +26,7 @@ form.addEventListener("submit", (e) => {
 
             // Display weather data and icon
             iconDiv.innerHTML = `<i class="fas fa-${getIcon(iconCode)}"></i>`;
-            detailsDiv.innerHTML = `Temperature: ${temp}°C<br>Description: ${description}<br>Humidity: ${humidity}`;
+            detailsDiv.innerHTML = `Temperature: ${temp}°C<br>Description: ${description}<br>Humidity: ${humidity}<br>Pressure: ${pressure}mbar`;
         })
         .catch((error) => {
             console.error(error);
