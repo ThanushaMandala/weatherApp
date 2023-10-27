@@ -33,6 +33,10 @@ form.addEventListener("submit", (e) => {
 
             // Display weather data and icon
             iconDiv.innerHTML = `<i class="fas fa-${getIcon(iconCode)}"></i>`;
+
+            // set the title attribute for the tooltip
+            iconDiv.title = `Weather Condition: ${description}`;
+
             detailsDiv.innerHTML = `Temperature: ${temp}°C<br>Description: ${description}<br>Humidity: ${humidity}<br>Pressure: ${pressure}mbar`;
         })
         .catch((error) => {
