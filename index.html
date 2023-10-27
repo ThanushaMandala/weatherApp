@@ -11,10 +11,14 @@
       <label for="city">Enter city name:</label>
       <input type="text" id="city" name="city">
       <button type="submit">Get Weather</button>
-      <button type="reset">Clear</button>
+      <!-- <button type="reset">Clear</button> -->
     </form>
-    <div id="loadingSpinner" class="loading-spinner"></div>
-    <div id="weather">
+    <div id="loadingSpinner" class="loading-spinner">
+      <div class="spinner">
+      </div>
+      
+    </div>
+    <div id="weather" class="container">
       <h3>Current Weather Conditions</h3>
       <div id="icon"></div>
       <div id="details"></div>
