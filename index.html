@@ -11,12 +11,14 @@
       <label for="city">Enter city name:</label>
       <input type="text" id="city" name="city">
       <button type="submit">Get Weather</button>
-    </form>
-    <div id="weather">
+     </form>
+  <div id="loadingSpinner" class="loading-spinner"></div>
+  <div id="weather" class="card">
+      <h3 id="weatherTitle">Current weather details:</h3>
       <div id="icon"></div>
-      <h2>Current Weather Details</h2> 
       <div id="details"></div>
-    </div>
+  </div>
+  
     <script src="app.js"></script>
   </body>
 </html>
