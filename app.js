@@ -20,6 +20,7 @@ form.addEventListener("submit", (e) => {
             const description = data.data[0].weather.description;
             const humidity = data.data[0].rh;
             const pressure = data.data[0].pres;
+            const windSpeed = data.data[0].wind_spd;
 
             let iconCode = data.data[0].weather.icon;
             iconCode = iconCode.substring(1);
@@ -44,6 +45,10 @@ form.addEventListener("submit", (e) => {
                     <tr>
                         <td><i class="fas fa-tachometer-alt"></i></td>
                         <td>Pressure: ${pressure}mbar</td>
+                    </tr>
+                    <tr>
+                        <td><i class="fas fa-wind"></i></td>
+                        <td>Wind Speed: ${windSpeed}m/s</td>
                     </tr>
                 </table>
             `;
