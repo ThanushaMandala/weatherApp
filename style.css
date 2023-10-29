@@ -1,4 +1,9 @@
 body {
+
+  font-family: Arial, sans-serif;
+  background-color: #ac8e07;
+
+
   font-family: 'Roboto', sans-serif;
   background: linear-gradient(to right, #1c92d2, #f2fcfe);
   color: #333;
@@ -67,6 +72,18 @@ button[type="submit"]:hover {
   background-color: #3e8e41;
 }
 
+
+.container{
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 10rem;
+  margin-right: 10rem;
+  border: 2px solid #090909;
+  
+}
+
+h3{
+  text-align: center;
 button[type="reset"] {
   background-color: #6c757d;
   color: white;
@@ -85,12 +102,24 @@ button[type="reset"] {
 
 #icon {
   font-size: 5rem;
+  margin-bottom: 1rem;
   text-align: center;
 }
 
 #details {
   font-size: 1.5rem;
+  text-align: center;
 }
+
+/* .spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top: 2px solid #3498db;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  
+} */
 
 .loading-spinner {
   border: 6px solid rgba(0, 0, 0, 0.1);
@@ -103,6 +132,7 @@ button[type="reset"] {
   margin: auto;
   margin-top: 20px;
 }
+
 
 @keyframes spin {
   0% {
