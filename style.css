@@ -85,6 +85,13 @@ button[type="reset"] {
 
 #weather {
   margin-top: 30px;
+  background-color: #f0f0f0;
+  color: black;
+}
+
+#get-weekly-forecast {
+  background-color: #f0f0f0;
+  color: black;
 }
 
 .card {
