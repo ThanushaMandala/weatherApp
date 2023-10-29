@@ -1,24 +1,27 @@
 const form = document.querySelector("form");
-const input = document.querySelector("input");
+const input = document.querySelector("#city");
 const iconDiv = document.querySelector("#icon");
 const detailsDiv = document.querySelector("#details");
 const loadingSpinner = document.querySelector("#loadingSpinner");
 const weatherTitle = document.querySelector("#weatherTitle");
+const weeklyForecastButton = document.querySelector("#get-weekly-forecast");
 
 // Add event listener to search form
 form.addEventListener("submit", (e) => {
     e.preventDefault();
     const city = input.value;
     const apiKey = "f235c5e839c641aa861661c219ae7237";
-    const url = `https://api.weatherbit.io/v2.0/current?city=${city}&key=${apiKey}`;
+    const currentWeatherUrl = `https://api.weatherbit.io/v2.0/current?city=${city}&key=${apiKey}`;
+    const weeklyForecastUrl = `https://api.weatherbit.io/v2.0/forecast/daily?city=${city}&key=${apiKey}`;
 
     // show the loading spinner while fetching data
     loadingSpinner.style.display = 'block';
 
-    // Fetch weather data for selected location
-    fetch(url)
+    // Fetch current weather
+    fetch(currentWeatherUrl)
         .then((response) => response.json())
         .then((data) => {
+            // Display current weather data as before
             const temp = data.data[0].temp;
             const description = data.data[0].weather.description;
             const humidity = data.data[0].rh;
@@ -64,13 +67,35 @@ form.addEventListener("submit", (e) => {
                 </table>
             `;
             weatherTitle.textContent = `Current Weather Conditions in ${city}`;
+
+            // Fetch weekly forecast
+            return fetch(weeklyForecastUrl);
+        })
+        .then((response) => response.json())
+        .then((data) => {
+            const weeklyForecastData = data.data;
+            const weeklyForecastList = document.getElementById('weeklyForecastList');
+            weeklyForecastList.innerHTML = '';
+
+            weeklyForecastData.forEach((forecast) => {
+                const date = forecast.valid_date;
+                const maxTemp = forecast.max_temp;
+                const minTemp = forecast.min_temp;
+                const description = forecast.weather.description;
+
+                const listItem = document.createElement('li');
+                listItem.innerHTML = `
+                    <strong>${date}:</strong> Max Temp: ${maxTemp}°C, Min Temp: ${minTemp}°C, Description: ${description}
+                `;
+                weeklyForecastList.appendChild(listItem);
+            });
         })
         .catch((error) => {
             console.error(error);
             detailsDiv.innerHTML = "An error occurred while fetching weather data.";
+        })
             // hide the loading spinner after data is fetched
             loadingSpinner.style.display = 'none';
-        });
 });
 
 // Get icon code based on weather condition
