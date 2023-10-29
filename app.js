@@ -40,7 +40,7 @@ form.addEventListener("submit", (e) => {
                     </tr>
                     <tr>
                         <td><i class="fas fa-tint"></i></td>
-                        <td>Humidity: ${humidity}</td>
+                        <td>Humidity: ${humidity}%</td>
                     </tr>
                     <tr>
                         <td><i class="fas fa-tachometer-alt"></i></td>
