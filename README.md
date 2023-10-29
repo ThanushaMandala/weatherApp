@@ -1,11 +1,14 @@
-# weatherApp
-a simple weather app which gives temperature and describes the weather for a city name entered
-<img width="637" alt="Screenshot 2023-10-26 at 10 29 08 PM" src="https://github.com/ThanushaMandala/weatherApp/assets/67900374/aaf47ecc-5eb9-4cea-b588-b6473a52a799">
+# Weather App
+This is a simple weather application that fetches current weather data for a given city using the Weatherbit API.
 
-Example response when a city is entered.
-<img width="1728" alt="Screenshot 2023-10-26 at 11 02 44 PM" src="https://github.com/ThanushaMandala/weatherApp/assets/67900374/1e6789bd-3a0e-4a73-b6e0-17e67f4db66b">
+## Features
+- Fetches real-time weather data.
+- Displays temperature, description, humidity, and pressure.
+- Shows a loading spinner while fetching data.
+- All elements are responsive and aligned properly.
+  
+## How to Use
 
-How to Run the weatherApp:
 Set Up:
 Ensure you have a modern web browser installed (like Google Chrome, Firefox, Safari, etc.) and a code editor if you want to view or modify the source code.
 
@@ -47,3 +50,15 @@ Additional Features: Some APIs provide advanced features like historical weather
 
 
 Note: It's essential not to expose API keys in client-side code for production applications. This is just a simple example, and in a real-world scenario, you'd hide your API key server-side or use some proxy mechanism.
+
+## Technologies Used
+* HTML
+* CSS
+* JavaScript
+* Weatherbit API
+
+Author
+Thanusha and other open-source contributors
+
+License
+This project is open source. Anyone can clone and work.
