@@ -93,6 +93,7 @@ form.addEventListener("submit", (e) => {
         .catch((error) => {
             console.error(error);
             detailsDiv.innerHTML = "An error occurred while fetching weather data.";
+        })
             // hide the loading spinner after data is fetched
             loadingSpinner.style.display = 'none';
 });
