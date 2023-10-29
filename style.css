@@ -1,8 +1,19 @@
 body {
-  font-family: 'Roboto', sans-serif;
-  background: linear-gradient(to right, #1c92d2, #f2fcfe);
-  color: #333;
+  color: black;
+  font-size: 25px;
+  transition: background-color 0.5s;
 }
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+.light-mode {
+  background-color: #1c92d2;
+  color: black;
+}
+
 
 table {
   width: 60%;
@@ -106,11 +117,11 @@ button[type="reset"] {
 
 @keyframes spin {
   0% {
-      transform: rotate(0deg);
+    transform: rotate(0deg);
   }
 
   100% {
-      transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
