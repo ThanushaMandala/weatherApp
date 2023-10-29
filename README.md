@@ -9,22 +9,23 @@ This is a simple weather application that fetches current weather data for a giv
   
 ## How to Use
 
-Set Up:
+#### Set Up:
 Ensure you have a modern web browser installed (like Google Chrome, Firefox, Safari, etc.) and a code editor if you want to view or modify the source code.
 
-Clone or Download the Repository:
+#### Clone or Download the Repository:
 If the app is hosted on a platform like GitHub, provide steps to clone or download the source code.
 
-Open the Application:
-Navigate to the directory containing the weatherApp's files. Double click on the index.html (or the entry HTML file) to open the application in your default web browser.
+#### Open the Application:
+Navigate to the directory containing the weatherApp's files. Double-click on the index.html (or the entry HTML file) to open the application in your default web browser.
 
-Usage:
+## Usage:
 
-Once the application loads, you should see an input field.
-Enter the name of the city for which you want to check the weather.
-Click on the submit button (or press Enter).
-The app will then fetch and display the weather details for the specified city.
-API Details:
+- Once the application loads, you should see an input field.
+- Enter the name of the city or place for which you want to check the weather.
+- Click on the submit button (or press Enter).
+- The app will then fetch and display the weather details for the specified city.
+
+### API Details:
 Endpoint: https://api.weatherbit.io/v2.0/current
 
 Method: GET
@@ -57,8 +58,8 @@ Note: It's essential not to expose API keys in client-side code for production a
 * JavaScript
 * Weatherbit API
 
-Author
-Thanusha and other open-source contributors
+## Author
+Thanusha
 
-License
+## License
 This project is open source. Anyone can clone and work.
