@@ -3,7 +3,15 @@ body {
   font-size: 25px;
   transition: background-color 0.5s;
 }
-
+button img {
+  width: 85px; /* Adjust the width to the size you prefer */
+  height: auto; /* Maintain the aspect ratio */
+  margin-right: 5px; /* Add some spacing between the icon and text */
+  border-radius: 2px;
+}
+.rounded-button {
+  border-radius: 16px; /* Adjust the value to control the amount of rounding */
+}
 .dark-mode {
   background-color: black;
   color: white;
@@ -13,7 +21,6 @@ body {
   background-color: #1c92d2;
   color: black;
 }
-
 
 table {
   width: 60%;
@@ -70,7 +77,7 @@ button[type="reset"] {
 }
 
 button[type="submit"] {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
 }
 
