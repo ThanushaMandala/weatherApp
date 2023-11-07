@@ -1,0 +1,57 @@
+#light-switch {
+    appearance: none;
+    display: none;
+}
+
+.switch-button {
+    top: 10px;
+    margin-left: 10%;
+}
+.switch-mode {
+    position: relative;
+    display: block;
+    width: 70px;
+    height: 40px;
+    background: #1f4b66;
+    cursor: pointer;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: ease-in 0.5s;
+}
+
+#light-switch:checked ~ .switch-mode {
+    background: #fff;
+}
+
+.switch-mode:before{
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    background: #fff;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+#light-switch:checked~.switch-mode:before {
+    transform: translateX(30px);
+}
+
+.switch-mode:after {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    background: #1f4b66;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    transition: 0.5s;
+    transform: translateX(30px);
+}
+
+#light-switch:checked~.switch-mode:after {
+    transform: translateX(0);
+}
