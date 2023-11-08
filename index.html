@@ -1,21 +1,59 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>Weather App</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" href="./css/dark-theme.css">
     <script src="https://kit.fontawesome.com/6a8374cd04.js" crossorigin="anonymous"></script>
-  </head>
-  <body>
-    <h1>Weather App</h1>
-    <form>
-      <label for="city">Enter city name:</label>
-      <input type="text" id="city" name="city">
-      <button type="submit">Get Weather</button>
-    </form>
-    <div id="weather">
-      <div id="icon"></div>
-      <div id="details"></div>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body class="light-mode">
+
+    <!-- this is for dark theme -->
+    <div class="switch-button">
+        <label>
+            <input id="light-switch" type="checkbox" onclick="toggleMode()">
+            <span class="switch-mode"></span>
+        </label>
     </div>
-    <script src="app.js"></script>
-  </body>
+
+    <!-- <div class="switch">
+        <button class="switch mode" onclick="toggleMode()">Switch Mode</button>     
+    </div> -->
+
+    <script>
+        function toggleMode() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+            element.classList.toggle("light-mode");
+        }
+    </script>
+
+    <div class="container">
+        <h1>Weather App</h1>
+        <form>
+            <label for="city">Enter city name:</label>
+            <input type="text" id="city" name="city" placeholder="Enter city name">
+            <button type="submit">Get Weather</button>
+            <button type="reset">Clear</button>
+        </form>
+        <div id="loadingSpinner" class="loading-spinner"></div>
+        <div id="weather" class="card">
+            <h3 id="weatherTitle">Enter city name to see the weather information</h3>
+            <div id="icon"></div>
+            <div id="details"></div>
+        </div>
+        </br>
+        <div id="get-weekly-forecast" class="card">
+            <h3 id="weeklyForecastTitle">Weekly Forecast</h3>
+            <ul id="weeklyForecastList">
+            </ul>
+        </div>
+        <footer>Made with ❤️ by Thanusha</footer>
+        <script src="./js/app.js"></script>
+</body>
+
 </html>

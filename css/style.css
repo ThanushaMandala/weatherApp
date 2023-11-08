@@ -1,0 +1,138 @@
+body {
+  color: black;
+  font-size: 25px;
+  transition: background-color 0.5s;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+.light-mode {
+  background-color: #1c92d2;
+  color: black;
+}
+
+
+table {
+  width: 60%;
+  margin: auto;
+}
+
+table td {
+  padding: 5px;
+}
+
+table i {
+  margin-right: 5px;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+label {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+input[type="text"] {
+  font-size: 18px;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  margin-right: 10px;
+}
+
+button[type="submit"],
+button[type="reset"] {
+  font-size: 18px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+}
+
+button[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+button[type="reset"] {
+  background-color: #6c757d;
+  color: white;
+}
+
+#weather {
+  margin-top: 30px;
+  background-color: #f0f0f0;
+  color: black;
+}
+
+#get-weekly-forecast {
+  background-color: #f0f0f0;
+  color: black;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+#icon {
+  font-size: 5rem;
+  text-align: center;
+}
+
+#details {
+  font-size: 1.5rem;
+}
+
+.loading-spinner {
+  border: 6px solid rgba(0, 0, 0, 0.1);
+  border-left: 6px solid #3498db;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+  display: none;
+  margin: auto;
+  margin-top: 20px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+}
